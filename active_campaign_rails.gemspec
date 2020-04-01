@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Simple rails wrapper for ActiveCampaign API v3'
   spec.description   = 'For more information please visit https://developers.activecampaign.com'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = 'https://github.com/rhespinosa/active_campaign_rails'
   spec.license       = 'MIT'
 
   # Specify which files should be added to the gem when it is released.
