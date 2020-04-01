@@ -25,7 +25,7 @@ module ActiveCampaignRails
         }
       ')
       @request_headers = @request_headers.merge(request_headers) if request_headers
-      @client = Client.new(host: "#{@host}/3", request_headers: @request_headers)
+      @client = Client.new(host: @host, request_headers: @request_headers)
     end
   end
 end
