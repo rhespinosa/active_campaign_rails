@@ -5,7 +5,10 @@ RSpec.describe ActiveCampaignRails do
     expect(ActiveCampaignRails::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  describe 'initialization' do
+    it 'sets default value for the url attribute' do
+      configuration = described_class.new
+      expect(configuration.url).to eq('PLEASE PROVIDE VALID URL')
+    end
   end
 end

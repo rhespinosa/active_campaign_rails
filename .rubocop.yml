@@ -10,6 +10,9 @@ Metrics/AbcSize:
   Enabled: true
   Exclude:
     - 'app/helpers/devise_helper.rb'
+Metrics/MethodLength:
+  Enabled: true
+  Max: 15
 Metrics/BlockLength:
   Enabled: true
   Exclude:
