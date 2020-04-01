@@ -6,7 +6,7 @@ module ActiveCampaignRails
   # Initialize the HTTP client
   class API
     attr_accessor :client
-    attr_reader :request_headers, :host
+    attr_reader :api_key, :request_headers, :host
     # * *Args*    :
     #   - +api_key+ -> your ActiveCampaign API key
     #   - +host+ -> the base URL for the API
