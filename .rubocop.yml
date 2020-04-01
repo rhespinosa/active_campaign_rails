@@ -1,0 +1,27 @@
+AllCops:
+  Exclude:
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'bin/bundle'
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+    - 'config/**/*' 
+Metrics/AbcSize:
+  Enabled: true
+  Exclude:
+    - 'app/helpers/devise_helper.rb'
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - 'spec/**/*'
+Layout/LineLength:
+  Enabled: true
+  Max: 140
+  Include:
+    - 'app/**/*'
+  Exclude:
+    - 'db/schema.rb'
+Style/ClassAndModuleChildren:
+  Enabled: true  
+  Exclude:
+    - 'app/controllers/users/*'
