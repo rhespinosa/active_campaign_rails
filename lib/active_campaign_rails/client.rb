@@ -14,7 +14,7 @@ module ActiveCampaignRails
     #   - +version+ -> the version of the API you wish to access,
     #                  currently only "v3" is supported
     #
-    def initialize(api_key: '', host: nil, request_headers: nil)
+    def initialize(api_key = nil, host = nil, request_headers = nil)
       @api_key             = api_key
       @host                = host
       @request_headers     = JSON.parse('
@@ -26,14 +26,8 @@ module ActiveCampaignRails
       ')
 
       @request_headers = @request_headers.merge(request_headers) if request_headers
-      @client = Client.new(host: "#{@host}/#{@version}",
+      @client = Client.new(host: "#{@host}/3",
                            request_headers: @request_headers)
-    end
-
-    def perform_request(path)
-      url = @host + path.to_s
-      response = HTTParty.get(url, headers: @request_headers)
-      JSON.parse(response.body)
     end
   end
 end

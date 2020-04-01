@@ -3,6 +3,7 @@
 require 'active_campaign_rails/version'
 require 'active_campaign_rails/client'
 
+require 'active_support/core_ext/hash'
 require 'httparty'
 
 #
