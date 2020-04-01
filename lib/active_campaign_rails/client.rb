@@ -25,9 +25,6 @@ module ActiveCampaignRails
         }
       ')
       @request_headers = @request_headers.merge(request_headers) if request_headers
-      Rails.logger.info @request_headers
-      Rails.logger.info "#{@host}/3"
-      
       @client = Client.new(host: "#{@host}/3", request_headers: @request_headers)
     end
   end
