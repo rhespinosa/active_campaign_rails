@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'ruby_http_client'
 require_relative 'version'
 
 module ActiveCampaignRails
