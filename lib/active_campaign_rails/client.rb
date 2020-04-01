@@ -30,5 +30,11 @@ module ActiveCampaignRails
       @client = Client.new(host: "#{@host}/#{@version}",
                            request_headers: @request_headers)
     end
+
+    def perform_request(path)
+      url = @host + path.to_s
+      response = HTTParty.get(url, headers: @request_headers)
+      JSON.parse(response.body)
+    end
   end
 end
